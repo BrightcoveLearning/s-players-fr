@@ -1,51 +1,35 @@
 <article class="bcls-article">
-  <h1>{{ page.title }}</h1>
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    {% if site.product_short == "Video Cloud" %}
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="1689514929134937463">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    {% endif %}
-    <p>Players can be configured to display video thumbnail images over the player progress bar. Thumbnail images show a preview of the video at that point in time and allow viewers to preview a video and jump to a specific point in the video. Play the video below and hover over the progress bar to see the thumbnail seeking feature.</p>
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section"> {% if site.product_short == Video Cloud-fr/ %}
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="1689514929134937463">&nbsp;</div> <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> {% endif %}
+    <p>Les lecteurs peuvent être configurés pour afficher les images miniatures des vidéos sur la barre de progression du lecteur. Les images miniatures affichent un aperçu de la vidéo à ce moment-là et permettent aux spectateurs de prévisualiser une vidéo et de passer à un point précis de la vidéo. Regardez la vidéo ci-dessous et passez la souris sur la barre de progression pour voir la fonction de recherche de vignettes.</p>
     <div style="position: relative; display: block; max-width: 640px;">
-      <div style="padding-top: 56.25%;">
-        <iframe src="https://players.brightcove.net/1752604059001/p6Cx8IOkV_default/index.html?videoId=5124705901001" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe>
+      <div style="padding-top: 56.25%;"> <iframe src="https://players.brightcove.net/1752604059001/p6Cx8IOkV_default/index.html?videoId=5124705901001" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe>
       </div>
-    </div>
-    <aside class="bcls-aside bcls-aside--information">Note: This feature is currently not available when using a playlist player.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: Thumbnails on mobile devices are not supported.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: If you build custom implementations on top of the Brightcove Playback API (PAPI) responses, please note the following:
+    </div> <aside class="bcls-aside bcls-aside--information">Remarque
+description: Cette fonctionnalité n'est actuellement pas disponible lors de l'utilisation d'un lecteur de listes de lecteur.</aside> <aside class="bcls-aside bcls-aside--information">Remarque: Les miniatures sur les appareils mobiles ne sont pas prises en charge.</aside> <aside class="bcls-aside bcls-aside--information">Remarque: Si vous créez des implémentations personnalisées en plus des réponses PAPI (Brightcove Playback API), veuillez noter ce qui suit:
       <ul>
-        <li>With Server-Side Ad Insertion (SSAI), the thumbnails manifest is located in the VMAP instead of the PAPI response.</li>
-        <li>With non-SSAI, the thumbnails manifest is included in the PAPI response.</li>
-      </ul>
-    </aside>
-    <h3>When are thumbnail images generated?</h3>
-    <p>Brightcove generates the images dynamically on request. Any video ingested with Dynamic Delivery will have images generated on the first request. This ensures that images are not created for unused videos. Once generated, images are cached locally and on the CDN for repeat viewing, just like any other image.</p>
-    <h3>How often are images generated?</h3>
-    <p>The thumbnails list is filtered down based on the pixel width of the player at initialization. This list varies significantly depending on player styling, window sizing, platform/device, etc. The thumbnail plugin aims to show a new thumbnail roughly every 30px as the user hovers over the progress bar. For example, if the player is 1,500px wide, the player will attempt to filter the list down to 50 thumbnails. The remaining time intervals for the WebVTT cues are adjusted according to the content’s duration.</p>
-    <!-- <p>Images are generated every 5 seconds for videos < 1 hour and every 10 seconds for videos > 1 hour.</p> --> 
-  </section>
-  <section class="bcls-section">
-    <h2 id="Requirements">Requirements</h2>
-    <p> The following are required to use thumbnail seeking: </p>
+        <li>Avec Server-Side Ad Insertion (SSAI), le manifeste des vignettes se trouve dans le VMAP au lieu de la réponse PAPI.</li>
+        <li>Avec les non-SSAI, le manifeste des vignettes est inclus dans la réponse PAPI.</li>
+      </ul> </aside>
+    <h3>Quand les images miniatures sont-elles générées&nbsp;?</h3>
+    <p>Brightcove génère les images de manière dynamique sur demande. Toute vidéo ingérée avec Dynamic Delivery aura des images générées lors de la première demande. Cela garantit que les images ne sont pas créées pour les vidéos non utilisées. Une fois générées, les images sont mises en cache localement et sur le CDN pour un visionnage répété, comme n'importe quelle autre image.</p>
+    <h3>À quelle fréquence les images sont-elles générées&nbsp;?</h3>
+    <p>La liste des vignettes est filtrée en fonction de la largeur en pixels du lecteur lors de l'initialisation. Cette liste varie considérablement en fonction du style du lecteur, de la taille de la fenêtre, de la plate-forme/de l'appareil, etc. Le plugin de vignettes vise à afficher une nouvelle miniature environ tous les 30 pixels lorsque l'utilisateur passe la souris sur la barre de progression. Par exemple, si le lecteur mesure 1 500 pixels de large, il tentera de filtrer la liste jusqu'à 50 vignettes. Les intervalles de temps restants pour les signaux WebVTT sont ajustés en fonction de la durée du contenu.™</p>
+    <!-- <p>Images are generated every 5 seconds for videos < 1 hour and every 10 seconds for videos > 1 hour.</p> -->  </section><section class="bcls-section">
+    <h2 id="Requirements">Exigences</h2>
+    <p> Les éléments suivants sont requis pour utiliser la recherche de vignettes: </p>
     <ul>
-      <li> Brightcove Player version 6.41.0+ </li>
-      <li> Videos must be ingested using a Dynamic Delivery ingest profile</li>
-      <li> If using  server-side ad insertion (SSAI), <strong>videojs-ssai</strong> plugin version 1.10.0+ must be used</li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Implementing_thumbnails_using_Studio">Configuring thumbnail seeking</h2>
-    <p>Note that by default, thumbnail seeking is enabled for any newly created players. To configure thumbnail seeking for a player, follow these steps:</p>
+      <li> Lecteur Brightcove version 6.41.0 et ultérieure </li>
+      <li> Les vidéos doivent être ingérées à l'aide d'un profil d'acquisition Dynamic Delivery</li>
+      <li> Si vous utilisez l'insertion d'annonces côté serveur (SSAI), le<strong> plugin</strong> videojs-ssai version 1.10.0+ doit être utilisé</li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="Implementing_thumbnails_using_Studio">Configuration de la recherche de vignettes</h2>
+    <p>Notez que par défaut, la recherche de vignettes est activée pour tous les lecteurs nouvellement créés. Pour configurer la recherche de vignettes pour un lecteur, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Open the  <strong>Players</strong>  module.</li>
-      <li>Click the link for the player you want to configure.</li>
-      <li>Click <strong>Controls </strong>in the left navigation menu.</li>
-      <li>Check<strong> Thumbnail Seeking</strong>.
-        <figure class="bcls-figure">
-        <img class="bcls-image--no-border" alt="Brightcove Plugin" src="/assets/images/s-players-img/thumbnail-seeking.png" /> </figure></li>
-      <li>Click <span class="button-blue">Publish &amp; Embed</span>   and then <span class="button-blue">Publish Changes</span> to publish the player. Note that it may take up to 5 minutes for the changes to appear in published players.</li>
-    </ol>
-  </section>
-</article>
+      <li>Ouvrez le<strong> module</strong> Players.</li>
+      <li>Cliquez sur le lien correspondant au lecteur que vous souhaitez configurer.</li>
+      <li>Cliquez sur<strong> Contrôles</strong> dans le menu de navigation de gauche.</li>
+      <li>Vérifiez la recherche de<strong> vignettes</strong>. <figure class="bcls-figure">
+        <img class="bcls-image--no-border" alt="Module externe Brightcove" src="/assets/images/s-players-img/thumbnail-seeking.png" /> </figure></li>
+      <li>Cliquez sur<span class="button-blue"> Publier</span> et intégrer, puis sur<span class="button-blue"> Publier les modifications</span> pour publier le lecteur. Notez que l'affichage des modifications dans les lecteurs publiés peut prendre jusqu'à 5 minutes.</li>
+    </ol>   </section></article>

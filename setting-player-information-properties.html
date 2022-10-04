@@ -1,73 +1,59 @@
 <article class="bcls-article">
-  <h1>{{ page.title }}</h1>
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    <p>The player information properties can be used to set the player name, sizing, aspect ratio, dimensions, update mode and player version.</p>
-    <p>Many of the player properties can also be set/changed dynamically by editing the player publishing code. For more information, check these related documents depending on whether you are using the <a href="https://player.support.brightcove.com/publish/available-options-standard-iframe-embed-code.html">Standard (iframe)</a> or <a href="https://player.support.brightcove.com/publish/available-options-advanced-page-embed-code.html">Advanced (in-page)</a> embed code.</p>
-  </section>
-  <section class="bcls-section">
-    <p>To configure the <strong>Player Information</strong> properties, follow these steps:</p>
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <p>Les propriétés des informations du lecteur peuvent être utilisées pour définir le nom du lecteur
+, la taille, le format, les dimensions, le mode de mise à jour et la version du lecteur.</p>
+    <p>De nombreuses propriétés du lecteur peuvent également être définies/modifiées dynamiquement en modifiant le code de publication du lecteur. Pour plus d'informations, consultez ces documents connexes selon que vous utilisez le<a href="https://player.support.brightcove.com/publish/available-options-standard-iframe-embed-code.html"> code intégré</a> Standard (iframe)<a href="https://player.support.brightcove.com/publish/available-options-advanced-page-embed-code.html"> ou</a> Avancé (intégré à la page).</p>  </section><section class="bcls-section">
+    <p>Pour configurer les<strong> propriétés des informations sur le</strong> lecteur, procédez comme suit:</p>
     <ol class="bcls-tasklist">
-      <li>Open the  <strong>Players</strong>  module.</li>
-      <li>Click the link for the player you want to configure.</li>
-      <li>Click <strong>Player Information</strong> in the left navigation menu.</li>
+      <li>Ouvrez le<strong> module</strong> Players.</li>
+      <li>Cliquez sur le lien correspondant au lecteur que vous souhaitez configurer.</li>
+      <li>Cliquez sur Informations sur le<strong> lecteur
+</strong> dans le menu de navigation de gauche.</li>
     </ol>
-    {% if site.product_short == "Video Cloud" %}
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="player information" src="/assets/images/s-players-img/node18508-player-info-props-vc.png" /></figure>
-  {% endif %}
-    {% if site.product_short == "Beacon" %}
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="player information" src="/assets/images/s-players-img/node18508-player-info-props-beacon.png" /></figure>
-  {% endif %}
-    <aside class="bcls-aside bcls-aside--information">Note: Any changes made to a player may take up to 5 minutes to appear in published players.</aside>
-    <p>The following player information properties can be configured:</p>
+    {% if site.product_short == Cloud vidéo-fr/ %} <figure class="bcls-figure"><img class="bcls-image--no-border" alt="informations sur le lecteur
+" src="/assets/images/s-players-img/node18508-player-info-props-vc.png" /></figure> {% endif %} {% if site.product_short == balise-fr/ %} <figure class="bcls-figure"><img class="bcls-image--no-border" alt="informations sur le lecteur
+" src="/assets/images/s-players-img/node18508-player-info-props-beacon.png" /></figure> {% endif %}<aside class="bcls-aside bcls-aside--information"> Remarque: Toute modification apportée à un lecteur peut prendre jusqu'à 5 minutes avant d'apparaître dans les lecteurs publiés.</aside>
+    <p>Les propriétés d'informations de lecteur suivantes peuvent être configurées:</p>
     <ul>
-      <li>Name and Short Description</li>
-      <li><a href="#player_type">Player Type</a></li>
-      <li><a href="#sizing">Sizing</a></li>
-      <li><a href="#aspect">Aspect Ratio</a></li>
-      <li><a href="#dimensions">Player Dimensions</a></li>
-      <li><a href="#updateversion">Update Mode</a></li>
-      <li><a href="#updateversion">Player Version</a></li>
-      <li><a href="#localization">Localization</a></li>
+      <li>Nom et brève description</li>
+      <li><a href="#player_type">Type de lecteur
+</a></li>
+      <li><a href="#sizing">dimensionnement</a></li>
+      <li><a href="#aspect">Rapport hauteur/largeur</a></li>
+      <li><a href="#dimensions">Dimensions du lecteur
+</a></li>
+      <li><a href="#updateversion">Mode mise à jour</a></li>
+      <li><a href="#updateversion">Version du lecteur</a></li>
+      <li><a href="#localization">Localisation</a></li>
     </ul>
-    <p>After making changes, click <span class="button-blue">Save</span> and then publish the player.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="player_type">Player Type</h2>
-    <p>The <strong>Player Type </strong> setting determines if the player will display a single video or if playlists are supported:</p>
+    <p>Après avoir apporté des modifications, cliquez sur<span class="button-blue"> Enregistrer,</span> puis publiez le lecteur.</p>  </section><section class="bcls-section">
+    <h2 id="player_type">Type de lecteur
+</h2>
+    <p>Le<strong> paramètre Type de</strong> lecteur détermine si le lecteur affichera une seule vidéo ou si les listes de lecteur sont prises en charge:</p>
     <ul>
-      <li><strong>Single Video</strong> - A single video is displayed</li>
-      <li><strong>Playlist</strong> - Player supports playlists</li>
+      <li><strong>Vidéo unique</strong>: une seule vidéo s'affiche</li>
+      <li><strong>Playlist</strong> - Le lecteur prend en charge les listes</li>
     </ul>
-    <p>Selecting <strong>Playlist</strong> will enable some additional <strong>Styling</strong> and <strong>Playback</strong> properties.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="sizing">Sizing</h2>
-    <p>Sizing can be set to <strong>Responsive</strong> or <strong>Fixed</strong>.</p>
+    <p>La sélection de<strong> Playlist</strong> activera certaines<strong> propriétés supplémentaires de</strong> style<strong> et de</strong> lecteur.</p>  </section><section class="bcls-section">
+    <h2 id="sizing">dimensionnement</h2>
+    <p>La taille peut être définie sur<strong> Réactive</strong> ou<strong> Fixe</strong>.</p>
     <ul>
-      <li><strong>Responsive</strong> - The player size will adjust automatically based upon the browser size</li>
-      <li><strong>Fixed</strong> - The player size is based upon the width and height parameters</li>
-    </ul>
-    <aside class="bcls-aside bcls-aside--information">Note: If you select the <strong>Responsive</strong> sizing option, the Standard (iframe) code works well and the player and playlist are responsive. If you use the Advanced (in-page embed) code, the player will be responsive, but the playlist will not.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="aspect">Aspect Ratio</h2>
-    <p>The <strong>Aspect Ratio</strong> sets the aspect ratio of the player.</p>
+      <li><strong>Responsive</strong> - La taille du lecteur s'ajustera automatiquement en fonction de la taille du navigateur</li>
+      <li><strong>Corrigé</strong> - La taille du lecteur
+ était basée sur les paramètres de largeur et de hauteur</li>
+    </ul> <aside class="bcls-aside bcls-aside--information">Remarque: Si vous sélectionnez l'option de<strong> dimensionnement</strong> réactif, le code Standard (iframe) fonctionne bien et le lecteur et la liste de lecteur sont réactifs. Si vous utilisez le code Avancé (intégré à la page), le lecteur répondra, mais pas la liste de lecteur.</aside> </section> <section class="bcls-section">
+    <h2 id="aspect">Rapport hauteur/largeur</h2>
+    <p>Le<strong> format d'image</strong> définit le rapport hauteur/largeur du lecteur.</p>
     <ul>
-      <li><strong>1:1, 3:2, 4:3, 16:9, 21:9 or 9:16</strong> - Enter a player width and the height will be determined automatically</li>
-      <li><strong>Custom</strong> - Enter values for both the player width and height</li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="dimensions">Player Dimensions</h2>
-    <p>The <strong>Player Dimensions</strong> control the width and height of the player.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="updateversion">Update Mode and Player Version</h2>
-    <p>The <strong>Update Mode</strong> controls how player updates are handled. The <strong>Player Version</strong> is used to select a player version. The <strong>Published Player Version</strong> field will display the current player version. For more information on these settings and how they should be used, see <a href="/players/setting-player-update-mode-and-version.html">Setting the Player Update Mode and Version</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="localization">Localization</h2>
-    <p>The <strong>Localization</strong> field can be used to include the language(s) you wish to use for player localization. For more information on player localization, see <a href="/players/configuring-player-localization.html">Configuring Player Localization</a>.</p>
-  </section>
-</article>
+      <li><strong>1:1, 3:2, 4:3, 16:9, 21:9 ou 9:16</strong> - Entrez la largeur d'un lecteur
+ et la hauteur sera déterminée automatiquement</li>
+      <li><strong>Personnalisé</strong>: saisissez des valeurs pour la largeur et la hauteur du lecteur</li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="dimensions">Dimensions du lecteur
+</h2>
+    <p>Les dimensions du<strong> lecteur</strong> contrôlent la largeur et la hauteur du lecteur.</p>  </section><section class="bcls-section">
+    <h2 id="updateversion">Mode mise à jour et version du lecteur</h2>
+    <p>Le mode de<strong> mise à jour</strong> contrôle la façon dont les mises à jour des lecteur
+s La version du<strong> lecteur</strong> est utilisée pour sélectionner une version du lecteur. Le<strong> champ Version du lecteur</strong> publiée affiche la version actuelle du lecteur. Pour plus d'informations sur ces paramètres et la façon dont ils doivent être utilisés, consultez<a href="/players/setting-player-update-mode-and-version.html"> Configuration du mode et de la version de mise à jour du lecteur</a>.</p>  </section><section class="bcls-section">
+    <h2 id="localization">Localisation</h2>
+    <p>Le<strong> champ</strong> Localisation peut être utilisé pour inclure la ou les langues que vous souhaitez utiliser pour la localisation du lecteur. Pour plus d'informations sur la localisation des lecteurs, consultez<a href="/players/configuring-player-localization.html"> Configuration de la localisation du lecteur</a>.</p>   </section></article>

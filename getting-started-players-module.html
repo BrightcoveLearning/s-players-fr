@@ -1,123 +1,118 @@
 <article class="bcls-article">
-  <h1>{{ page.title }}</h1>
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section"> {% if site.product_short == "Video Cloud" %}
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4231692338001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> 
-    {% endif %}
-    <p>If you are looking to quickly get started creating and publishing a player, check out the <a href="/publish/step-step-using-players-module-create-and-publish-player.html">Step-by-Step: Using the Players Module to Create and Publish a Player</a> topic.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="using">Using the Players module</h2>
-    <p>To access the Players module, login to Studio and click <strong>Players</strong> in the primary navigation.</p>
-    {% if site.product_short == "Video Cloud" %}
-    <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node14049-players-module-vc.png" />
-    </figure>
-  {% endif %}
-    {% if site.product_short == "Beacon" %}
-    <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node14049-players-module-beacon.png" />
-    </figure>
-  {% endif %}
-    <p>The body of the page will display:</p>
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section"> {% if site.product_short == Video Cloud-fr/ %}
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4231692338001">&nbsp;</div> <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> {% endif %}
+    <p>Si vous souhaitez vous lancer rapidement dans la création et la publication d'un lecteur, consultez la section Étape<a href="/publish/step-step-using-players-module-create-and-publish-player.html"> par étape: Utilisation du module Players pour créer et publier un</a> sujet Player.</p>  </section><section class="bcls-section">
+    <h2 id="using">Utilisation du module Players</h2>
+    <p>Pour accéder au module Players, connectez-vous à Studio et cliquez sur<strong> Players</strong> dans la navigation principale.</p>
+    {% if site.product_short == Video Cloud-fr/ %}<figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node14049-players-module-vc.png" /> </figure> {% endif %} {% if site.product_short == Beacon-fr/ %}<figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node14049-players-module-beacon.png" /> </figure> {% endif %}
+    <p>Le corps de la page affichera:</p>
     <ul>
-      <li>Player name</li>
-      <li>Player ID</li>
-      <li>Updated date and time</li>
-      <li>Player status
+      <li>Nom du lecteur
+</li>
+      <li>ID du lecteur
+</li>
+      <li>Date et heure mises à jour</li>
+      <li>Statut du lecteur
+
         <ul>
-          <li><img alt="" src="/assets/images/s-players-img/node14049-cone-icon.png" /> - Indicates that changes have been made to the player but the changes have not been published</li>
-          <li><img alt="" src="/assets/images/s-players-img/node14049-check-icon.png" /> - Indicates that the player is activated and all changes made to the player have been published</li>
-          <li><img alt="" src="/assets/images/s-players-img/node14049-red-circle-icon.png" /> - Indicates that the player is deactivated</li>
+          <li><img alt="" src="/assets/images/s-players-img/node14049-cone-icon.png" /> - Indique que des modifications ont été apportées au lecteur mais qu'elles n'ont pas été publiées</li>
+          <li><img alt="" src="/assets/images/s-players-img/node14049-check-icon.png" /> - Indique que le lecteur est activé et que toutes les modifications apportées au lecteur ont été publiées</li>
+          <li><img alt="" src="/assets/images/s-players-img/node14049-red-circle-icon.png" /> - Indique que le lecteur est désactivé</li>
         </ul>
       </li>
     </ul>
-    <p>Using the Players module, you can:</p>
+    <p>À l'aide du module Players, vous pouvez:</p>
     <ul>
-      <li><a href="#create">Create a new player</a></li>
-      <li><a href="#edit">Edit player properties</a></li>
-      <li><a href="#duplicate">Duplicate a player</a></li>
-      <li><a href="#delete">Delete players</a></li>
-      <li><a href="#search">Search for players</a></li>
-      <li><a href="#preview">Preview a player</a></li>
-      <li><a href="#embed">Generate the embed code and URL for a player</a></li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="create">Creating a new player</h2>
-    <p>To create a new player using the Players module:</p>
+      <li><a href="#create">Créer un nouveau lecteur
+</a></li>
+      <li><a href="#edit">Modifier les propriétés du lecteur</a></li>
+      <li><a href="#duplicate">Dupliquer un lecteur
+</a></li>
+      <li><a href="#delete">Supprimer des lecteur
+s</a></li>
+      <li><a href="#search">Rechercher des lecteur
+s</a></li>
+      <li><a href="#preview">Prévisualiser un lecteur
+</a></li>
+      <li><a href="#embed">Générer le code d'intégration et l'URL d'un lecteur</a></li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="create">Création d'un nouveau lecteur
+</h2>
+    <p>Pour créer un nouveau lecteur à l'aide du module Players:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Click <span class="button-blue"><i class="button-icon" data-feather="plus"></i>Add player</span>.</li>
-      <li>Enter a name and short description for the player and then click <span class="button-blue">Save</span>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node14049-new-player.png" /></figure>
+      <li>Cliquez sur<span class="button-blue"> Ajouter un lecteur
+</span>.</li>
+      <li>Saisissez un nom et une brève description pour le lecteur, puis cliquez sur<span class="button-blue"> Enregistrer</span>. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node14049-new-player.png" /></figure>
       </li>
-      <li>The new player will appear in the list of players.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node14049-list-of-players.png" /></figure>
+      <li>Le nouveau lecteur
+ apparaîtra dans la liste des lecteur
+s. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node14049-list-of-players.png" /></figure>
       </li>
-    </ol>
-    <aside class="bcls-aside bcls-aside--information">Note: A maximum of 200 players can be created. Brightcove discourages the creation of a large numbers of players but, if this is necessary, please contact your Account Manager and request an increase in the number of players you can create.</aside>
-    <p>When a new player is created using the Players module, the player is built using the latest player version as published by Brightcove. The  player version appears on the Players module homepage.  Note that all players may not be the same version. As Brightcove continues to develop and improve the Brightcove player, new player versions will be released. By default, updates are applied to all players automatically. To prevent auto-updating of a player, you must set the <strong>Update Mode</strong> setting to <strong>Manual</strong> (also known as locking a player). For more information, see <a href="/players/setting-player-update-mode-and-version.html">Setting the Player Update Mode and Version</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">Editing player properties</h2>
-    <p>There are numerous player properties that can be configured to customize the look and feel of the player:</p>
+    </ol> <aside class="bcls-aside bcls-aside--information">Remarque: Un maximum de 200 lecteur
+s peut être créé. Brightcove décourage la création d'un grand nombre de lecteurs mais, si cela est nécessaire, veuillez contacter votre responsable de compte et demander une augmentation du nombre de lecteurs que vous pouvez créer.</aside>
+    <p>Lorsqu'un nouveau lecteur est créé à l'aide du module Players, le lecteur est créé à l'aide de la dernière version du lecteur publiée par Brightcove. La version du lecteur apparaît sur la page d'accueil du module Players. Notez que tous les lecteurs peuvent ne pas être de la même version. Alors que Brightcove continue de développer et d'améliorer le lecteur Brightcove, de nouvelles versions de lecteur seront publiées. Par défaut, les mises à jour sont appliquées automatiquement à tous les lecteur
+s. Pour empêcher la mise à jour automatique d'un lecteur, vous devez définir le<strong> paramètre Mode de</strong> mise à jour sur<strong> Manuel</strong> (également appelé verrouillage d'un lecteur). Pour plus d'informations, consultez<a href="/players/setting-player-update-mode-and-version.html"> Configuration du mode et de la version de mise à jour du lecteur</a>.</p>  </section><section class="bcls-section">
+    <h2 id="edit">Modification des propriétés du lecteur</h2>
+    <p>Il existe de nombreuses propriétés du lecteur qui peuvent être configurées pour personnaliser l'apparence du lecteur:</p>
     <ul>
-      <li>Player Information</li>
-      <li>Styling</li>
-      <li>Playback</li>
-      <li>Controls</li>
+      <li>Informations sur le lecteur
+</li>
+      <li>coiffant</li>
+      <li>Lecture</li>
+      <li>Contrôles</li>
       <li>Social</li>
       <li>Plugins</li>
-      <li>End Screens</li>
-      <li>Advertising</li>
-      <li>Content Restriction</li>
-      <li>Campaign</li>
-      <li>JSON Editor</li>
-      <li>Third-Party Analytics</li>
+      <li>Écrans de fin</li>
+      <li>Publicité</li>
+      <li>Restriction relative</li>
+      <li>Campagne</li>
+      <li>Éditeur JSON</li>
+      <li>Analyses tierces</li>
     </ul>
-    <p>To edit the player properties, click an item in the left navigation menu. For information on configuring player properties, see <a href="/players/setting-player-properties.html">Setting Player Properties</a>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: Any changes made to a player may take up to 5 minutes to appear in published players.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="duplicate">Duplicating a player</h2>
-    <p>Duplicating a player allows you to create a new player based upon an existing player. To duplicate a player in the Players module:</p>
+    <p>Pour modifier les propriétés du lecteur, cliquez sur un élément dans le menu de navigation de gauche. Pour plus d'informations sur la configuration des propriétés du lecteur, voir<a href="/players/setting-player-properties.html"> Définition des propriétés du lecteur</a>.</p> <aside class="bcls-aside bcls-aside--information">Remarque: Toute modification apportée à un lecteur peut prendre jusqu'à 5 minutes avant d'apparaître dans les lecteurs publiés.</aside> </section> <section class="bcls-section">
+    <h2 id="duplicate">Dupliquer un lecteur
+</h2>
+    <p>La duplication d'un lecteur
+ vous permet de créer un nouveau lecteur
+ basé sur un lecteur
+ existant. Pour dupliquer un lecteur
+ dans le module Players:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Check the box next to the player you want to duplicate.</li>
-      <li>Click <span class="button-blue-text-bordered">Duplicate</span>.</li>
-      <li>Enter a <strong>Name</strong> and <strong>Short Description</strong> for the player.</li>
-      <li>Click <span class="button-blue">Save</span>.</li>
+      <li>Cochez la case en regard du lecteur que vous souhaitez dupliquer.</li>
+      <li>Cliquez sur <span class="button-blue-text-bordered"></span>Dupliquer</li>
+      <li>Saisissez un<strong> nom</strong> et une<strong> brève description</strong> pour le lecteur
+.</li>
+      <li>Cliquez sur<span class="button-blue"> Enregistrer</span>.</li>
     </ol>
-    Note that players with unpublished changes can't be duplicated. The Duplicate button will be disabled.</section>
-  <section class="bcls-section">
-    <h2 id="delete">Deleting players</h2>
-    <p>Deleting a player removes it from your account and cannot be undone. To delete a player in the Players module:</p>
+    Notez que les lecteurs dont les modifications n'ont pas été publiées ne peuvent pas être dupliqués. Le bouton Dupliquer sera désactivé.</section> <section class="bcls-section">
+    <h2 id="delete">Suppression de lecteur
+s</h2>
+    <p>La suppression d'un lecteur
+ le supprime de votre compte et ne peut pas être annulé. Pour supprimer un lecteur dans le module Players:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Check the box next to the player(s) you want to delete.</li>
-      <li>Click <img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/icon-delete.png" />.</li>
-      <li>Confirm the deletion by clicking <span class="button-red">Delete</span>.</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="search">Searching for players</h2>
-    <p>The Search field can be used to search the players in your account. When searching, the following fields are searched:</p>
+      <li>Cochez la case en regard du ou des lecteur
+s que vous souhaitez supprimer.</li>
+      <li>Cliquez sur<img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/icon-delete.png" />.</li>
+      <li>Confirmez la suppression en cliquant sur<span class="button-red"> Supprimer</span>.</li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="search">Recherche de lecteur
+s</h2>
+    <p>Le champ de recherche peut être utilisé pour rechercher les lecteur
+s de votre compte. Lors de la recherche, les champs suivants sont recherchés:</p>
     <ul>
-      <li>Player name</li>
-      <li>Player ID</li>
-      <li>Short description</li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="preview">Previewing a player</h2>
-    <p>To preview a player, select a player from the list of players and then click <strong> Preview player</strong>. The player will open in the preview dialog.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node14049-preview-player.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="embed">Generating the embed code and URL for a player</h2>
-    <p>The <strong>Embed Code &amp; URL</strong> button can generate the player embed code and URL for the <strong>preview player</strong> or the <strong>published player</strong>. Typically, the preview player embed code and URL are used to preview the changes being made to a player. This gives you the ability to see the changes in action before publishing the player out to a production site. Once a player is published, changes will be reflected in all instances of that particular player.</p>
-    <p>For information on the differences between the preview player and published player and on generating the embed code for a player, see <a href="/players/generating-player-embed-code.html">Generating Player Embed&nbsp;Code</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="shortcuts">Keyboard shortcuts</h2>
-    <p>Pressing the <strong>?</strong> key in the Players module will open a list of the shortcut keys that are available.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node14049-keyboard-shortcuts.png" /></figure>
-  </section>
-</article>
+      <li>Nom du lecteur
+</li>
+      <li>ID du lecteur
+</li>
+      <li>Brève description</li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="preview">Prévisualisation d'un lecteur</h2>
+    <p>Pour prévisualiser un lecteur
+, sélectionnez-le dans la liste des lecteur
+s, puis cliquez sur<strong> Aperçu du lecteur
+</strong>. Le lecteur s'ouvre dans la boîte de dialogue d'aperçu.</p>   <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node14049-preview-player.png" /></figure></section><section class="bcls-section">
+    <h2 id="embed">Générer le code d'intégration et l'URL d'un lecteur</h2>
+    <p>Le<strong> bouton Code</strong> intégré et URL peut générer le code d'intégration du lecteur et l'URL pour le lecteur d'<strong>aperçu</strong> ou le lecteur<strong> publié</strong>. En règle générale, le code d'intégration et l'URL du lecteur de prévisualisation sont utilisés pour prévisualiser les modifications apportées à un lecteur. Cela vous permet de voir les modifications en action avant de publier le lecteur sur un site de production. Une fois qu'un lecteur est publié, les modifications seront répercutées dans toutes les instances de ce lecteur en particulier.</p>
+    <p>Pour plus d'informations sur les différences entre le lecteur d'aperçu et le lecteur publié et sur la génération du code intégré pour un lecteur, consultez<a href="/players/generating-player-embed-code.html"> Génération du code intégré du lecteur</a>.</p>  </section><section class="bcls-section">
+    <h2 id="shortcuts">Raccourcis clavier</h2>
+    <p>Appuyez sur le bouton<strong>&nbsp;? </strong>du module Lecteurs permet d'ouvrir la liste des touches de raccourci disponibles.</p>    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node14049-keyboard-shortcuts.png" /></figure></section></article>

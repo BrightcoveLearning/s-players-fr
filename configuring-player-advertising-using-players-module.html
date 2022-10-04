@@ -1,81 +1,59 @@
 <article class="bcls-article">
-  <h1>{{ page.title }}</h1>
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    {% if site.product_short == "Video Cloud" %}
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4043519495001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    {% endif %}
-    <p>The advertising properties are used to enable client-side and/or server-side advertising for a Brightcove Player:</p>
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section"> {% if site.product_short == Video Cloud-fr/ %}
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4043519495001">&nbsp;</div> <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> {% endif %}
+    <p>Les propriétés publicitaires sont utilisées pour activer la publicité côté client et/ou côté serveur pour un lecteur Brightcove:</p>
     <ul>
-      <li>Client-side advertising supports Google's Interactive Media Ads (IMA) for HTML5 version 3. This allows you to request and track VAST ads for your player. For details about Google IMA, see the <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/">Using the IMA HTML5 SDK Version 3</a> document.</li>
-      <li>Server-side advertising stitches ads right into the video content stream, so it works on any device that can play streaming video. Without SSAI, client-side ads, such as IMA or FreeWheel using VAST, VMAP and VPAID, will not play if there is an ad blocker in the browser. To learn more about SSAI, see the <a href="https://ssai.support.brightcove.com/getting-started/video-cloud-ssai-overview.html">Video Cloud SSAI Overview</a> document. Note that the server-side option will not appear unless your account has been enabled for SSAI.</li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="test">Testing the ad server (client-side advertising)</h2>
-    <p>When configuring the client-side advertising properties, an ad server URL will be required. Brightcove recommends that you verify the validity of your ad server URL. We have found that most of the issues around ads not playing are due to problems with the ad tag itself. Verifying that the ad tag is valid should ensure that ads play without issues. Google provides a Video Suite Inspector that can be used to verify ad tags. To verify your ad tag, follow these steps.</p>
+      <li>La publicité côté client prend en charge Interactive Media Ads (IMA) de Google pour HTML5 version 3. Cela vous permet de demander et de suivre les publicités VAST pour votre lecteur. Pour plus d'informations sur Google IMA, consultez le<a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/"> document</a> Utilisation du SDK HTML5 IMA Version 3.</li>
+      <li>La publicité côté serveur intègre les publicités directement dans le flux de contenu vidéo, de sorte qu'elle fonctionne sur n'importe quel appareil capable de lire des vidéos en streaming. Sans SSAI, les publicités côté client, telles que IMA ou FreeWheel utilisant VAST, VMAP et VPAID, ne seront pas diffusées s'il y a un bloqueur de publicités dans le navigateur. Pour en savoir plus sur SSAI, consultez le<a href="https://ssai.support.brightcove.com/getting-started/video-cloud-ssai-overview.html"> document</a> Video Cloud SSAI Overview. Notez que l'option côté serveur n'apparaîtra que si votre compte a été activé pour SSAI.</li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="test">Test du serveur publicitaire (publicité côté client)</h2>
+    <p>Lors de la configuration des propriétés publicitaires côté client, une URL de serveur publicitaire est requise. Brightcove vous recommande de vérifier la validité de l'URL de votre serveur publicitaire. Nous avons constaté que la plupart des problèmes liés à la non-diffusion des publicités sont dus à des problèmes liés au tag publicitaire lui-même. La vérification de la validité du tag publicitaire doit garantir que les publicités sont diffusées sans problème. Google fournit un inspecteur de suite vidéo qui peut être utilisé pour vérifier les balises publicitaires. Pour vérifier votre balise publicitaire, procédez comme suit.</p>
     <ol class="bcls-tasklist-restart">
-      <li>Open the <a href="https://googleads.github.io/googleads-ima-html5/vsi/">Video Suite Inspector</a> page.</li>
-      <li>Paste your ad tag URL into the Input type form input field.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="ima plugin studio" src="/assets/images/s-players-img/node15689-vs-inspect.png" /></figure>
+      <li>Ouvrez la<a href="https://googleads.github.io/googleads-ima-html5/vsi/"> page</a> Video Suite Inspector.</li>
+      <li>Collez l'URL de votre balise publicitaire dans le champ de saisie du formulaire Type d'entrée. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="studio de greffons ima" src="/assets/images/s-players-img/node15689-vs-inspect.png" /></figure>
       </li>
-      <li>Click <strong>Test Ad</strong>.</li>
-      <li>Verify that you see your ad. If your ad tag is not working in this test environment, it will not work with a Brightcove Player.</li>
+      <li>Cliquez sur<strong> Test Ad</strong>.</li>
+      <li>Vérifiez que votre annonce s'affiche. Si votre balise publicitaire ne fonctionne pas dans cet environnement de test, elle ne fonctionnera pas avec un lecteur Brightcove.</li>
     </ol>
-    <p>The advertising properties are used to integrate a Brightcove Player with Google's Interactive Media Ads (IMA) for HTML5 version 3. This allows you to request and track VAST ads for your player. For details about Google IMA, see the <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/">Using the IMA HTML5 SDK Version 3</a> document.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="client">Configuring the client-side advertising properties</h2>
-    <p>To configure client-side advertising for a player, follow these steps:</p>
+    <p>Les propriétés publicitaires sont utilisées pour intégrer un lecteur Brightcove à Interactive Media Ads (IMA) de Google pour HTML5 version 3. Cela vous permet de demander et de suivre les publicités VAST pour votre lecteur. Pour plus d'informations sur Google IMA, consultez le<a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/"> document</a> Utilisation du SDK HTML5 IMA Version 3.</p>  </section><section class="bcls-section">
+    <h2 id="client">Configuration des propriétés publicitaires côté client</h2>
+    <p>Pour configurer la publicité côté client pour un lecteur, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Open the  <strong>Players</strong>  module.</li>
-      <li>Click the link for the player you want to configure.</li>
-      <li>Click <strong>Advertising</strong> in the left navigation menu.</li>
-      <li>Check <strong>Enable Client-Side (IMA)</strong>.</li>
-      <li>Enter the <strong>Ad Tag</strong>.</li>
-      <li>Select the <strong>Request Ads</strong> setting.
+      <li>Ouvrez le<strong> module</strong> Players.</li>
+      <li>Cliquez sur le lien correspondant au lecteur que vous souhaitez configurer.</li>
+      <li>Cliquez sur<strong> Publicité</strong> dans le menu de navigation de gauche.</li>
+      <li>Cochez la case<strong> Activer côté client (IMA)</strong>.</li>
+      <li>Saisissez l'<strong>Ad Tag</strong>.</li>
+      <li>Sélectionnez le<strong> paramètre</strong> Demander des annonces.
         <ul>
-          <li><strong>On load -</strong> Ads are requested immediately when the player loads (this is normally the best experience for DFP / VPAID)</li>
-          <li><strong>On play -</strong> The first ad request is delayed until playback is initiated</li>
-          <li><strong>On demand -</strong> All ad requests will be initiated programmatically using the <code translate="No">player.ima3.adrequest()</code> method</li>
-          <li><strong>On cue point -</strong> Ad requests are made when ad cue points are encountered in the video</li>
+          <li><strong>En charge - Les</strong> publicités sont demandées immédiatement lorsque le lecteur se charge (c'est normalement la meilleure expérience pour DFP/VPAID)</li>
+          <li><strong>En cours de lecteur:</strong> la première demande d'annonce est retardée jusqu'au lancement de la lecteur</li>
+          <li><strong>À la demande:</strong> toutes les demandes d'annonces seront lancées par programmation en utilisant la<code translate="No"> méthode</code> player.ima3.adrequest ()</li>
+          <li><strong>Point de repère: les demandes d'</strong>annonces sont effectuées lorsque des points de repère publicitaires sont rencontrés dans la vidéo</li>
         </ul>
       </li>
-      <li>Select the <strong>VPAID Mode</strong>. The VPAID Mode is used to enable VPAID 2 support in IMA ads.
+      <li>Sélectionnez le mode<strong> VPAID</strong>. Le mode VPAID est utilisé pour activer la prise en charge de VPAID 2 dans les publicités IMA.
         <ul>
-          <li><strong>Enabled -</strong> Play VPAID ads in an iframe with a different domain</li>
-          <li><strong>Insecure -</strong> Play VPAID ads in an iframe with the same domain</li>
-          <li><strong>Disabled -</strong> VPAID ads throw an error</li>
+          <li><strong>Activé -</strong> Diffusez des annonces VPAID dans un iframe avec un autre domaine</li>
+          <li><strong>Non sécurisé -</strong> Diffusez des annonces VPAID dans un iframe avec le même domaine</li>
+          <li><strong>Désactivé - Les annonces</strong> VPAID génèrent une erreur</li>
         </ul>
       </li>
-      <li>Set the <strong> Timeout</strong> value <strong>-</strong> The maximum amount of time to wait, in milliseconds, for an ad to initialize before playback.</li>
-      <li>Check <strong>Hard timeouts</strong> to prevent slow loading ads from appearing. Unchecking this option could result in a slow loading ad interrupting video playback.</li>
-      <li>Set the <strong>Maximum Number of Redirects</strong>. This specifies the maximum number of redirects before the subsequent redirects will be denied, and the ad load aborted. The number of redirects directly affects latency and thus user experience.</li>
-      <li>Select the IMA <strong>Plugin Version</strong> to use.
-    {% if site.product_short == "Video Cloud" %}
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node15897-ad-props-vc.png" /></figure>
-        {% endif %}
-    {% if site.product_short == "Beacon" %}
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node15897-ad-props-beacon.png" /></figure>
-  {% endif %}
+      <li>Définir la<strong> valeur du</strong> délai d'expiration<strong>:</strong> durée maximale d'attente, en millisecondes, avant l'initialisation d'une annonce avant sa lecteur.</li>
+      <li>Cochez la case Délais<strong> d'expiration</strong> difficiles pour empêcher l'affichage d'annonces à chargement lent. Si vous décochez cette option, vous risquez de ralentir le chargement et d'interrompre la lecteur de la vidéo.</li>
+      <li>Définissez le nombre<strong> maximum de redirections</strong>. Cela spécifie le nombre maximum de redirections avant que les redirections suivantes ne soient refusées et que le chargement de la publicité soit abandonné. Le nombre de redirections affecte directement la latence et donc l'expérience utilisateur.</li>
+      <li>Sélectionnez la version du<strong> plugin IMA</strong> à utiliser. {% if site.product_short == Video Cloud-fr/ %}<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node15897-ad-props-vc.png" /></figure> {% endif %} {% if site.product_short == Beacon-fr/ %}<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node15897-ad-props-beacon.png" /></figure> {% endif %}
       </li>
-      <li>Click <span class="button-blue">Save</span>  to save the changes.</li>
+      <li>Cliquez sur<span class="button-blue"> Enregistrer</span> pour enregistrer les modifications.</li>
     </ol>
-    <p>The IMA plugin does support additional properties that are not available in the UI. If needed, modify the IMA plugin JSON to include any other options you may need. For more information on IMA plugin specific options and ad framework options, see the <a href="https://player.support.brightcove.com/plugins/advertising-ima3-plugin.html">Advertising with IMA3 Plugin</a> developer document.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="server">Configuring server-side advertising</h2>
-    <p>When using server-side ads, you must create one or more ad configurations. Ad Configurations define various aspects of SSAI playback, including ad call(s), beacons, and other configuration options. An account can have multiple configurations and currently configurations can not be shared across accounts. The Server-Side Ad Setting menu in the Admin UI is used to create and manage ad configurations. For information, see <a href="/admin/configuring-server-side-ad-settings.html">Configuring Server-Side Ad Settings</a>.</p>
-    <p>To configure client-side advertising for a player, follow these steps:</p>
-    <aside class="bcls-aside bcls-aside--information">Note: The server-side advertising option will only appear if the account has been enabled for server-side ads.</aside>
+    <p>Le plug-in IMA prend en charge des propriétés supplémentaires qui ne sont pas disponibles dans l'interface utilisateur. Si nécessaire, modifiez le JSON du plugin IMA pour inclure toutes les autres options dont vous pourriez avoir besoin. Pour plus d'informations sur les options spécifiques du plugin IMA et les options du framework publicitaire, consultez le document du<a href="https://player.support.brightcove.com/plugins/advertising-ima3-plugin.html"> développeur</a> Advertising with IMA3 Plugin.</p>  </section><section class="bcls-section">
+    <h2 id="server">Configuration de la publicité côté serveur</h2>
+    <p>Lorsque vous utilisez des publicités côté serveur, vous devez créer une ou plusieurs configurations d'annonces. Les configurations publicitaires définissent divers aspects de la lecteur SSAI, y compris les appels publicitaires, les balises et d'autres options de configuration. Un compte peut avoir plusieurs configurations et actuellement les configurations ne peuvent pas être partagées entre les comptes. Le menu Paramètres publicitaires côté serveur de l'interface utilisateur d'administration est utilisé pour créer et gérer les configurations publicitaires. Pour plus d'informations, consultez<a href="/admin/configuring-server-side-ad-settings.html"> la section Configuration des paramètres publicitaires côté serveur</a>.</p>
+    <p>Pour configurer la publicité côté client pour un lecteur, procédez comme suit:</p> <aside class="bcls-aside bcls-aside--information">Remarque: L'option de publicité côté serveur n'apparaîtra que si le compte a été activé pour les publicités côté serveur.</aside>
     <ol class="bcls-tasklist-restart">
-      <li>Check <strong>Enable Server-Side (SSAI)</strong>.</li>
-      <li>Use the <strong>Select Configuration</strong> dropdown to select the ad configuration to associate with this player.</li>
-      <li>Check the <strong>Enable ad information overlays</strong> checkbox if you want overlays to display over your ads. This includes "Learn More" and ad count down overlays.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node15897-server-ad-props.png" /></figure>
+      <li>Cochez<strong> Activer côté serveur (SSAI)</strong>.</li>
+      <li>Utilisez la<strong> liste déroulante</strong> Sélectionner la configuration pour sélectionner la configuration publicitaire à associer à ce lecteur.</li>
+      <li>Cochez la<strong> case</strong> Activer les incrustations d'informations publicitaires si vous souhaitez que les superpositions s'affichent sur vos annonces. Cela inclut les incrustations En savoir plus-fr/ et le compte à rebours des publicités. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node15897-server-ad-props.png" /></figure>
       </li>
-      <li>Click <span class="button-blue">Save</span>.</li>
-    </ol>
-  </section>
-</article>
+      <li>Cliquez sur<span class="button-blue"> Enregistrer</span>.</li>
+    </ol>   </section></article>

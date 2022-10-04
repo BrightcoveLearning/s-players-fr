@@ -1,85 +1,68 @@
 <article class="bcls-article">
-    <h1>{{ page.title }}</h1>
-    <summary>{{ page.description }}</summary>
-    <section class="bcls-section">
-    {% if site.product_short == "Video Cloud" %}
-        <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4734475241001">&nbsp;</div>
-        <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-  {% endif %}
-        <p>A major advantage of the Brightcove Player is its ability to be customized. Customization allows for brand-specific user interface elements and colors, interactive elements, integration with any 3rd-party advertising or analytics system, and much more. But customization can also make the player different from the version Brightcove tests as part of the regular quality assurance and release process. For customers who have customized their players and want to make sure new versions do not break player or site behavior, Brightcove offers customers the ability to opt out of regular automatic version updates.</p>
-        <p>As part of the Player settings, the <strong>Update Mode</strong> and <strong>Player Version</strong> can be configured. The <strong>Update Mode</strong> controls how player updates are handled. The <strong>Player Version</strong> is used to set the player version. Being able to control the <strong>Update Mode</strong> and <strong>Player Version</strong> provides these benefits:</p>
+    <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section"> {% if site.product_short == Video Cloud-fr/ %}
+        <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4734475241001">&nbsp;</div> <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> {% endif %}
+        <p>L'un des principaux avantages du lecteur Brightcove est sa capacité à être personnalisé. La personnalisation permet d'utiliser des éléments et des couleurs d'interface utilisateur spécifiques à la marque, des éléments interactifs, l'intégration avec n'importe quel système de publicité ou d'analyse tiers, et bien plus encore. Mais la personnalisation peut également rendre le lecteur différent de la version testée par Brightcove dans le cadre du processus régulier d'assurance qualité et de publication. Pour les clients qui ont personnalisé leurs lecteurs et qui souhaitent s'assurer que les nouvelles versions ne perturberont pas le comportement du lecteur ou du site, Brightcove offre aux clients la possibilité de se désabonner des mises à jour automatiques régulières des versions.</p>
+        <p>Dans le cadre des paramètres du lecteur, le mode de<strong> mise à jour</strong> et la version du<strong> lecteur</strong> peuvent être configurés. Le mode de<strong> mise à jour</strong> contrôle la façon dont les mises à jour des lecteur
+s La version du<strong> lecteur</strong> est utilisée pour définir la version du lecteur. La possibilité de contrôler le mode de<strong> mise à jour</strong> et la version<strong> du lecteur</strong> offre les avantages suivants:</p>
         <ul>
-            <li>Publishers can try pre-release player versions without having to use the API</li>
-            <li>Publishers can control when player updates are made</li>
-        </ul>
-    </section>
-    <section class="bcls-section">
-        <h2 id="updateprocess">Player update process</h2>
-        <p>Brightcove is committed to providing the latest functionality and bug fixes to customers as quickly as possible. As part of the agile delivery discipline, Brightcove strives to divide feature enhancements and bug fixes into incremental updates that can be released every couple of weeks. The release process consists of unit tests, automated integration and regression tests, as well as manual tests on a representative sample of customer sites - where the page is modified locally in the test environment. After a new version has passed all tests, Brightcove releases it as a pre-release. This allows customers to choose this version explicitly using the Player Management API or using the player version selector drop-down in the Player module. At this point, no players are updated except those that have explicitly chosen the new version. If you are using the default automatic update mode and want to make sure your site will work properly with the next global update, you can create a special test player with the new version and try it on a test or staging version of your site during the pre-release period.</p>
-        <h3>Major version updates</h3>
-        <p>Major version updates are indicated by a change to the first number in the version identifier, for example the major version of <strong>6.42.5</strong> is<strong> 6</strong>. A change to the major version indicates a significant change to the way an API works, which may break an existing integration. Because of this, and in order to prevent problems with your site, <span style="color:red; font-weight: bold">automatic updates will not be made for major version updates</span>. That means that your player will effectively be locked at the final release of a major version even if you have selected automatic update mode.</p>
-    </section>
-    <section class="bcls-section">
-        <h2 id="managed">Managed release</h2>
-        <p>Brightcove generally allows about a week for customers to try a pre-release before a managed release begins. Managed release is the process of running a controlled A/B test across production web sites. The managed release system allows loading the new version of the player on a small percentage of page loads for a short period - usually a few hours. During this time, Brightcove collects data so the performance of the old and new versions can be compared. The distribution of number of errors, number of minutes viewed, number of ad starts, and several other metrics are all examined. Brightcove looks at distributional counts and summaries of the data, but also at outliers, sites that have greater than average differences in the tracked metrics. After careful review of all the data, either the update is committed or rolled back. If it is decided to roll it back, small updates may be made to fix an identified problem and then the managed release is re-run.</p>
-    </section>
-    <section class="bcls-section">
-        <h2 id="update">Setting the player update mode</h2>
-        <p>To edit the player <strong>Update Mode</strong>, follow these steps.</p>
+            <li>Les éditeurs peuvent essayer les versions préliminaires du lecteur sans avoir à utiliser l'API</li>
+            <li>Les éditeurs peuvent contrôler quand les mises à jour du lecteur sont effectuées</li>
+        </ul>  </section><section class="bcls-section">
+        <h2 id="updateprocess">Processus de mise à jour</h2>
+        <p>Brightcove s'engage à fournir les dernières fonctionnalités et corrections de bogues aux clients le plus rapidement possible. Dans le cadre de la discipline de livraison Agile, Brightcove s'efforce de diviser les améliorations des fonctionnalités et les corrections de bogues en mises à jour incrémentielles qui peuvent être publiées toutes les deux semaines. Le processus de publication comprend des tests unitaires, des tests d'intégration et de régression automatisés, ainsi que des tests manuels sur un échantillon représentatif de sites clients, où la page est modifiée localement dans l'environnement de test. Une fois qu'une nouvelle version a passé tous les tests, Brightcove la publie en tant que pré-version. Cela permet aux clients de choisir cette version explicitement en utilisant l'API de gestion du lecteur ou en utilisant le menu déroulant du sélecteur de version du lecteur dans le module Lecteur. À ce stade, aucun lecteur n'est mis à jour sauf ceux qui ont explicitement choisi la nouvelle version. Si vous utilisez le mode de mise à jour automatique par défaut et que vous voulez vous assurer que votre site fonctionnera correctement lors de la prochaine mise à jour globale, vous pouvez créer un lecteur de test spécial avec la nouvelle version et l'essayer sur une version test ou intermédiaire de votre site pendant la période de pré-lancement.</p>
+        <h3>Mises à jour de versions</h3>
+        <p>Les mises à jour de version majeures sont indiquées par une modification du premier chiffre dans l'identifiant de version, par exemple la version majeure de<strong> 6.42.5</strong> est<strong> 6</strong>. Une modification apportée à la version majeure indique un changement important dans le fonctionnement d'une API, qui peut interrompre une intégration existante. Pour cette raison, et afin d'éviter tout problème avec votre site, aucune mise à jour<span style="color:red; font-weight: bold"> automatique ne sera effectuée pour les mises à jour majeures des versions</span>. Cela signifie que votre lecteur sera effectivement verrouillé lors de la sortie finale d'une version majeure, même si vous avez sélectionné le mode de mise à jour automatique.</p>  </section><section class="bcls-section">
+        <h2 id="managed">Version gérée</h2>
+        <p>Brightcove accorde généralement environ une semaine aux clients pour essayer une version préliminaire avant le lancement d'une version gérée. La version gérée est le processus qui consiste à exécuter un test A/B contrôlé sur les sites Web de production. Le système de publication géré permet de charger la nouvelle version du lecteur sur un faible pourcentage de pages chargées pendant une courte période, généralement quelques heures. Pendant ce temps, Brightcove collecte des données afin de comparer les performances des anciennes et des nouvelles versions. La distribution du nombre d'erreurs, du nombre de minutes visionnées, du nombre de lancements d'annonces et de plusieurs autres indicateurs sont tous examinés. Brightcove examine les comptes de distribution et les résumés des données, mais aussi les valeurs aberrantes, c'est-à-dire les sites qui présentent des différences supérieures à la moyenne dans les mesures suivies. Après un examen attentif de toutes les données, la mise à jour est validée ou annulée. S'il est décidé de l'annuler, de petites mises à jour peuvent être effectuées pour corriger un problème identifié, puis la version gérée est réexécutée.</p>  </section><section class="bcls-section">
+        <h2 id="update">Configuration du mode de mise à jour du</h2>
+        <p>Pour modifier le mode de<strong> mise à jour du lecteur</strong>, procédez comme suit.</p>
         <ol class="bcls-tasklist-restart">
-            <li>Open the <strong>Players</strong> module.</li>
-            <li>Click on a player to open the player properties.</li>
-            <li>Click <strong>Player Information</strong> in the left navigation menu.</li>
-            <li>Select an <strong>Update Mode</strong>. Both <strong>Automatic</strong> and <strong>Manual</strong> modes are available.
-                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node16130-update-mode.png" /></figure>
+            <li>Ouvrez le<strong> module</strong> Players.</li>
+            <li>Cliquez sur un lecteur pour ouvrir ses propriétés.</li>
+            <li>Cliquez sur Informations sur le<strong> lecteur
+</strong> dans le menu de navigation de gauche.</li>
+            <li>Sélectionnez un mode de<strong> mise à jour</strong>. Les<strong> modes</strong> automatique<strong> et</strong> manuel sont disponibles. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node16130-update-mode.png" /></figure>
                 <div class="BCL-subsection">
-                    <h3>Automatic player updates</h3>
-                    <p><strong>Automatic</strong> is the default mode. Automatic causes the player to be updated whenever Brightcove promotes a player version to “current default” status. When <strong>Automatic</strong> is selected, the <strong>Player Version</strong> options are <strong>Always latest release</strong> and <strong>Always latest pre-release</strong>.</p>
-                    <p>Note: For information on the latest pre-release player version, see the <a href="https://player.support.brightcove.com/release-notes/brightcove-player-prerelease-notes.html">Brightcove Player Pre-Release</a> document.</p>
+                    <h3>Mises à jour automatiques des</h3>
+                    <p><strong>Le mode automatique</strong> est le mode par défaut. Automatique provoque la mise à jour du lecteur chaque fois que Brightcove promeut une version du lecteur au statut par défaut actuel-fr/. Lorsque<strong> Automatique</strong> est sélectionné, les<strong> options Version du</strong> lecteur sont<strong> Toujours la dernière version</strong> et<strong> Toujours la dernière version préliminaire </strong>.</p>
+                    <p>Remarque: Pour plus d'informations sur la dernière version préliminaire du lecteur, consultez le<a href="https://player.support.brightcove.com/release-notes/brightcove-player-prerelease-notes.html"> document de préversion de</a> Brightcove Player.</p>
                 </div>
                 <div class="BCL-subsection">
-                    <h3>Manual player updates</h3>
-                    <p>In <strong>Manual</strong> mode, players will not be automatically updated. This is also referred to as "locking" the player. When this option is chosen for a player, that player will not be part of the managed release process and will remain at the chosen version. You should think carefully before choosing this mode because it means you will no longer get automatic bug fixes or feature enhancements. At some point, old player versions will no longer be supported. You should use the Manual mode only as a temporary solution while you resolve conflicts between the existing version of the player and the latest version. When <strong>Manual</strong> mode is selected a specific player version can be selected using the <strong>Player Version</strong> dropdown list.</p>
-                    <h4>Reasons to choose Manual updates</h4>
+                    <h3>Mises à jour manuelles</h3>
+                    <p>En<strong> mode</strong> manuel, les lecteur
+s ne seront pas automatiquement mis à jour. C'est ce que l'on appelle également le verrouillage-fr/ du lecteur. Lorsque cette option est sélectionnée pour un lecteur
+, celui-ci ne fait pas partie du processus de publication géré et reste dans la version choisie. Vous devez bien réfléchir avant de choisir ce mode, car cela signifie que vous n'obtiendrez plus de corrections de bogues automatiques ni d'améliorations de fonctionnalités. À un moment donné, les anciennes versions du lecteur ne seront plus prises en charge. Vous devez utiliser le mode manuel uniquement comme solution temporaire pendant que vous résolvez les conflits entre la version existante du lecteur et la dernière version. Lorsque<strong> le mode</strong> Manuel est sélectionné, une version spécifique du lecteur peut être sélectionnée à l'aide de la liste<strong> déroulante Version du</strong> lecteur.</p>
+                    <h4>Raisons de choisir Manual updates</h4>
                     <ul>
-                        <li><strong>Advanced advertising configuration</strong> - If you are using the IMA or FreeWheel plugins and have made any configuration or extension of ad behavior not possible through the Studio UI, including setting custom configuration parameters or interacting with the plugin using JavaScript in a custom plugin or page logic, this may be a reason to lock your player.</li>
-                        <li><strong>3rd-party plugins</strong> - If you are using an analytics or other plugin provided by a 3rd party, recognize that these plugins are not maintained by Brightcove and may be sensitive to minor changes in JavaScript event behavior of the player. Brightcove recommends that users of these plugins lock their players.</li>
-                        <li><strong>Significant CSS changes</strong> - Examples of significant CSS changes include: changing layout, sizing, positioning of elements, or changes that would not endure changes to layout, sizing, or positioning after an update. Examples of safe CSS changes: changing text, background colors, or changing fonts in a way that doesn't affect layout.</li>
+                        <li><strong>Configuration avancée de la publicité</strong> - Si vous utilisez les plug-ins IMA ou FreeWheel et que vous avez rendu impossible toute configuration ou extension du comportement publicitaire via l'interface utilisateur de Studio, y compris la définition de paramètres de configuration personnalisés ou l'interaction avec le plugin à l'aide de JavaScript dans un plugin personnalisé ou logique de page, cela peut être une raison pour verrouiller votre lecteur.</li>
+                        <li><strong>Plug-ins tiers</strong> - Si vous utilisez un module d'analyse ou un autre plug-in fourni par un tiers, sachez que ces plug-ins ne sont pas gérés par Brightcove et qu'ils peuvent être sensibles à des modifications mineures du comportement des événements JavaScript du lecteur. Brightcove recommande aux utilisateurs de ces plug-ins de verrouiller leurs lecteurs.</li>
+                        <li><strong>Changements CSS importants</strong> - Des exemples de modifications CSS importantes incluent: la modification de la mise en page, du dimensionnement, du positionnement des éléments ou des modifications qui ne supporteraient pas les modifications de la mise en page, du dimensionnement ou du positionnement après une mise à jour. Exemples de modifications CSS sûres: modification du texte, des couleurs d'arrière-plan ou modification des polices d'une manière qui n'affecte pas la mise en page.</li>
                     </ul>
-                </div>
-                <aside class="bcls-aside bcls-aside--warning">Note: When a player is locked on a version, plugins associated with that player will NOT be automatically updated, and also locked on the current version for each plugin.</aside>
+                </div> <aside class="bcls-aside bcls-aside--warning">Remarque: Lorsqu'un lecteur est verrouillé sur une version, les plugins associés à ce lecteur ne seront PAS automatiquement mis à jour, et également verrouillés sur la version actuelle pour chaque plugin.</aside>
             </li>
-            <li>Click <span class="button-blue">Save</span>.</li>
+            <li>Cliquez sur<span class="button-blue"> Enregistrer</span>.</li>
         </ol>
-        <p>Make sure to publish any changes that are made to the player.</p>
-    </section>
-    <section class="bcls-section">
-        <h2 id="version">Setting the player version</h2>
-        <p>The <strong>Player Version</strong> is used to set the player version. If the update mode is Manual and a new player version is available, a message will be displayed.</p>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node16130-new-player-version.png" /></figure>
-        <p>To edit the <strong>Player Version</strong>, follow these steps.</p>
+        <p>Veillez à publier toutes les modifications apportées au lecteur.</p>  </section><section class="bcls-section">
+        <h2 id="version">Définition de la version du lecteur</h2>
+        <p>La version du<strong> lecteur</strong> est utilisée pour définir la version du lecteur. Si le mode de mise à jour est Manuel et qu'une nouvelle version du lecteur est disponible, un message s'affiche.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node16130-new-player-version.png" /></figure>
+        <p>Pour modifier la version du<strong> lecteur</strong>, procédez comme suit.</p>
         <ol class="bcls-tasklist-restart">
-            <li>Open the <strong>Players</strong> module.</li>
-            <li>Click on a player to open the player properties.</li>
-            <li>Click <strong>Player Information</strong> in the left navigation menu.</li>
-            <li>If the <strong>Update Mode</strong> is set to <strong>Automatic</strong>, the <strong>Player Version</strong> can be:
+            <li>Ouvrez le<strong> module</strong> Players.</li>
+            <li>Cliquez sur un lecteur pour ouvrir ses propriétés.</li>
+            <li>Cliquez sur Informations sur le<strong> lecteur
+</strong> dans le menu de navigation de gauche.</li>
+            <li>Si le mode de<strong> mise à jour</strong> est défini sur<strong> Automatique</strong>, la version du<strong> lecteur</strong> peut être:
                 <ul>
-                    <li><strong>Always latest release</strong> - This option will cause the player version to be updated to the latest release version automatically as new release versions are available</li>
-                    <li><strong>Always latest pre-release</strong> - This option will cause the player version to be updated to the latest pre-release version (or release version if there is no pre-release version available) automatically as new pre-release versions are available.
-                        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node16130-auto-player-version.png" /></figure>
+                    <li><strong>Toujours la dernière version</strong> - Cette option entraînera la mise à jour automatique de la version du lecteur vers la dernière version dès que de nouvelles versions seront disponibles</li>
+                    <li><strong>Toujours la dernière version préliminaire</strong> - Cette option entraînera la mise à jour automatique de la version du lecteur vers la dernière version préliminaire (ou la version finale si aucune version préliminaire n'est disponible) au fur et à mesure que de nouvelles versions préliminaires sont disponibles. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node16130-auto-player-version.png" /></figure>
                     </li>
                 </ul>
             </li>
-            <li>If the <strong>Update Mode</strong> is set to <strong>Manual</strong>, select a specific <strong>Player Version</strong>.
-                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node16130-manual-player-version.png" /></figure>
+            <li>Si le mode de<strong> mise à jour</strong> est défini sur<strong> Manuel</strong>, sélectionnez une version de<strong> lecteur spécifique</strong>. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node16130-manual-player-version.png" /></figure>
             </li>
-            <li>Click <span class="button-blue">Save</span>.</li>
+            <li>Cliquez sur<span class="button-blue"> Enregistrer</span>.</li>
         </ol>
-        <p>Make sure to publish any changes that are made to the player.</p>
-    </section>
-    <section class="bcls-section">
-        <h2 id="support">Support</h2>
-        <p>Brightcove Technical Support will provide support and advice to any customer with a current support contract using any version of the Brightcove Player. However, bug fixes will only be applied to the latest revision of a major version. After a major version is released, certain bug fixes will be applied to the last revision of the previous major version for up to 6 months.</p>
-        <p>Brightcove hopes that these options provide you with the tools you need to ensure the best possible player experience on your site while also providing the maximum customization options.</p>
-    </section>
-</article>
+        <p>Veillez à publier toutes les modifications apportées au lecteur.</p>  </section><section class="bcls-section">
+        <h2 id="support">Assistance</h2>
+        <p>Le support technique de Brightcove fournira une assistance et des conseils à tout client disposant d'un contrat de support en cours de validité utilisant n'importe quelle version du lecteur Brightcove. Cependant, les corrections de bogues ne seront appliquées qu'à la dernière révision d'une version majeure. Après la publication d'une version majeure, certaines corrections de bogues seront appliquées à la dernière révision de la version majeure précédente pendant 6 mois maximum.</p>
+        <p>Brightcove espère que ces options vous fourniront les outils dont vous avez besoin pour garantir la meilleure expérience de lecteur possible sur votre site tout en fournissant le maximum d'options de personnalisation.</p>  </section></article>

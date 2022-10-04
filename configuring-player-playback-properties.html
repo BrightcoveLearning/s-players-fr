@@ -1,73 +1,51 @@
 <article class="bcls-article">
-  <h1>{{ page.title }}</h1>
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    <p>The <strong>Playback</strong> properties can be used to configure how video playback is handled in the player.</p>
-    <p>To configure the <strong>Playback</strong> properties, follow these steps:</p>
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <p>Les<strong> propriétés</strong> Playback peuvent être utilisées pour configurer la façon dont la lecteur vidéo est gérée dans le lecteur.</p>
+    <p>Pour configurer les<strong> propriétés de</strong> lecteur, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Open the  <strong>Players</strong>  module.</li>
-      <li>Click the link for the player you want to configure.</li>
-      <li>Click <strong>Playback</strong> in the left navigation menu.</li>
+      <li>Ouvrez le<strong> module</strong> Players.</li>
+      <li>Cliquez sur le lien correspondant au lecteur que vous souhaitez configurer.</li>
+      <li>Cliquez sur<strong> Lecture</strong> dans le menu de navigation de gauche.</li>
     </ol>
-    {% if site.product_short == "Video Cloud" %}
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="playback properties" src="/assets/images/s-players-img/node18510-playback-props-vc.png" /></figure>
-  {% endif %}
-    {% if site.product_short == "Beacon" %}
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="playback properties" src="/assets/images/s-players-img/node18510-playback-props-beacon.png" /></figure>
-  {% endif %}
-    <aside class="bcls-aside bcls-aside--information">Note: Any changes made to a player may take up to 5 minutes to appear in published players.</aside>
-    <p>The following playback properties can be configured:</p>
+    {% if site.product_short == Cloud vidéo-fr/ %} <figure class="bcls-figure"><img class="bcls-image--no-border" alt="propriétés de lecteur" src="/assets/images/s-players-img/node18510-playback-props-vc.png" /></figure> {% endif %} {% if site.product_short == balise-fr/ %} <figure class="bcls-figure"><img class="bcls-image--no-border" alt="propriétés de lecteur" src="/assets/images/s-players-img/node18510-playback-props-beacon.png" /></figure> {% endif %}<aside class="bcls-aside bcls-aside--information"> Remarque: Toute modification apportée à un lecteur peut prendre jusqu'à 5 minutes avant d'apparaître dans les lecteurs publiés.</aside>
+    <p>Les propriétés de lecteur suivantes peuvent être configurées:</p>
     <ul>
-      <li><a href="#start">Auto-Play Video on Player Load</a></li>
-      <li><a href="#muted">Play Muted</a></li>
-      <li><a href="#preload">Preload Video Before Playback</a></li>
-      <li><a href="#drm">Enable DRM</a></li>
-      <li><a href="#playlist">Playlist properties</a></li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="start">Auto-Play Video on Player Load</h2>
-    <p>The <strong>Auto-Play Video on Player Load</strong> setting controls whether the video will start playing when the player is loaded. This setting may function differently depending on the browser. For more detailed information, see <a href="https://player.support.brightcove.com/playback/autoplay-considerations.html">Autoplay Considerations</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="muted">Play Muted</h2>
-    <p>The <strong>Play Muted</strong> setting controls whether the video's audio will be muted.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="preload">Preload Video Before Playback</h2>
-    <p>The <strong>Preload Video Before Playback</strong> setting controls whether the player will preload video content before the user initiates playback.</p>
-    <aside class="bcls-aside bcls-aside--warning">Note: For more details, see the <a href="https://player.support.brightcove.com/publish/available-options-advanced-page-embed-code.html#preload_details">preload details section</a> of the Available Options for the Advanced (in-page) Embed Code document.</aside>
-    <p>The following options are available:</p>
+      <li><a href="#start">Lecture automatique de la vidéo lors du chargement du lecteur</a></li>
+      <li><a href="#muted">Jouer en mode muet</a></li>
+      <li><a href="#preload">Précharger la vidéo avant la lecteur</a></li>
+      <li><a href="#drm">Activer les DRM</a></li>
+      <li><a href="#playlist">Propriétés de la playlist</a></li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="start">Lecture automatique de la vidéo lors du chargement du lecteur</h2>
+    <p>Le<strong> paramètre</strong> Auto-Play Video on Player Load contrôle si la vidéo commencera à être lue lorsque le lecteur sera chargé. Ce paramètre peut fonctionner différemment selon le navigateur. Pour plus d'informations, consultez la section Considérations relatives<a href="https://player.support.brightcove.com/playback/autoplay-considerations.html"> à la lecteur automatique</a>.</p>  </section><section class="bcls-section">
+    <h2 id="muted">Jouer en mode muet</h2>
+    <p>Le<strong> paramètre</strong> Play Muted contrôle si le son de la vidéo sera désactivé.</p>  </section><section class="bcls-section">
+    <h2 id="preload">Précharger la vidéo avant la lecteur</h2>
+    <p>Le<strong> paramètre</strong> Précharger la vidéo avant la lecteur contrôle si le lecteur doit précharger le contenu vidéo avant que l'utilisateur ne lance la lecteur.</p> <aside class="bcls-aside bcls-aside--warning">Remarque: Pour plus de détails, consultez la section Détails du<a href="https://player.support.brightcove.com/publish/available-options-advanced-page-embed-code.html#preload_details"> préchargement</a> du document Options disponibles pour le document Code incorporé avancé (intégré à la page).</aside>
+    <p>Les options suivantes sont disponibles:</p>
     <ul>
-      <li><strong>Preload Video (fastest)</strong> - Indicates that the whole video file could be downloaded, even if the user does not eventually watch the video. On the positive side, if the viewer plays the video, it can start playing immediately. On the negative side, this option will increase bandwidth consumption as the preload/load happens even if the viewer does not play the video.</li>
-      <li><strong>Preload Metadata</strong> - Only the video metadata is preloaded. <em>This is the default.</em></li>
-      <li><strong>Do not preload</strong> - None of the video is preloaded</li>
-    </ul>
-    <aside class="bcls-aside bcls-aside--information">
-      <p>Notes:</p>
+      <li><strong>Preload Video (fastest)</strong> - Indique que l'intégralité du fichier vidéo peut être téléchargée, même si l'utilisateur ne regarde pas la vidéo. Du côté positif, si le spectateur lit la vidéo, elle peut commencer à jouer immédiatement. D'un autre côté, cette option augmentera la consommation de bande passante au fur et à mesure que le précharge/chargement se produit même si le spectateur ne lit pas la vidéo.</li>
+      <li><strong>Précharger les métadonnées</strong>: seules les métadonnées vidéo sont préchargées. <em>C'est la valeur par défaut.</em></li>
+      <li><strong>Ne pas précharger</strong>: aucune vidéo n'est préchargée</li>
+    </ul> <aside class="bcls-aside bcls-aside--information">
+      <p>Remarques:</p>
       <ul>
-        <li>When using Server-Side Ad Insertion (SSAI), Brightcove recommends setting <code translate="No">preload=none</code>. If <code translate="No">preload</code> is set to <code translate="No">auto</code> or <code translate="No">metadata</code>, the first frames of the video stream will be requested, which counts the ad as delivered even if the user does not start playback.</li>
-        <li>The value for the preload setting in Studio will override the value of the <code translate="No">preload</code> attribute value in the <a href="https://player.support.brightcove.com/publish/available-options-advanced-page-embed-code.html">Advanced (In-Page) Embed Code</a>.</li>
-      </ul>
-    </aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="drm">Enable DRM</h2>
-    <p>The <strong>Enable DRM</strong> setting, when checked, enables the ability for DRM-protected content to play in the player.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="playlist">Playlist properties</h2>
-    <p>When a <strong>Player Type</strong> of <strong>Playlist </strong>is selected as part of the <strong>Player Information</strong> properties, some additional <strong>Playback</strong> properties will be displayed.</p>
+        <li>Lors de l'utilisation de l'insertion publicitaire côté serveur (SSAI), Brightcove recommande de définir<code translate="No"> preload=none</code>. Si le<code translate="No"> préchargement</code> est défini sur<code translate="No"> auto</code> ou<code translate="No"> les métadonnées</code>, les premières images du flux vidéo seront demandées, ce qui comptabilise l'annonce comme diffusée même si l'utilisateur ne démarre pas la lecteur.</li>
+        <li>La valeur du paramètre de préchargement dans Studio remplacera la valeur de l'<code translate="No">attribut de</code> préchargement dans le code intégré<a href="https://player.support.brightcove.com/publish/available-options-advanced-page-embed-code.html"> avancé (In-Page)</a>.</li>
+      </ul>   </aside></section><section class="bcls-section">
+    <h2 id="drm">Activer les DRM</h2>
+    <p>Le<strong> paramètre</strong> Activer DRM, lorsqu'il est coché, permet de lire du contenu protégé par DRM dans le lecteur.</p>  </section><section class="bcls-section">
+    <h2 id="playlist">Propriétés de la playlist</h2>
+    <p>Lorsqu'un type<strong> de</strong> liste de lecteur de<strong> lecteur</strong> est sélectionné dans le cadre des<strong> propriétés Informations sur le</strong> lecteur, une<strong> lecteur supplémentaire </strong>les propriétés seront affichées.</p>
     <ul>
-      <li><strong>Randomize play order</strong> - Videos will be played in a random order</li>
-      <li><strong>Play video when selected</strong> - Clicking a thumbnail in the playlist menu will cause the video to play when loaded, even if the previous video in the player was paused</li>
-      <li><strong>Continuous play mode</strong> - Videos will advance automatically and repeat indefinitely</li>
-      <li><strong>Video Countdown</strong> - Only enabled when <strong>Continuous play mode</strong> is checked
+      <li><strong>Ordre de lecteur aléatoire</strong> - Les vidéos seront lues dans un ordre aléatoire</li>
+      <li><strong>Lire la vidéo lorsqu'elle est sélectionnée</strong>: si vous cliquez sur une miniature dans le menu de la liste de lecteur, la vidéo sera lue lors du chargement, même si la vidéo précédente du lecteur a été mise en pause</li>
+      <li><strong>Mode de lecteur continue</strong> - Les vidéos avancent automatiquement et se répètent indéfiniment</li>
+      <li><strong>Compte à rebours vidéo</strong> - Activé uniquement lorsque le mode de lecteur<strong> continue</strong> est coché
         <ul>
-          <li><strong>Up next card (auto advance)</strong> - An up next card is displayed in the player</li>
-          <li><strong>Up next endscreen (countdown)</strong> - An end screen countdown is displayed in the player</li>
+          <li><strong>Carte suivante (avance automatique)</strong> - Une carte suivante s'affiche dans le lecteur
+</li>
+          <li><strong>Écran de fin suivant (compte à rebours)</strong> - Un compte à rebours de l'écran de fin s'affiche dans le lecteur</li>
         </ul>
       </li>
-    </ul>
-  </section>
-</article>
+    </ul>   </section></article>

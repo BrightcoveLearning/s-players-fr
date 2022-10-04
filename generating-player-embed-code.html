@@ -1,49 +1,40 @@
 <article class="bcls-article">
-  <h1>{{ page.title }}</h1>
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    <p>The Players module provides the ability to generate the player embed code and player URL for both preview and published players. Typically, you would generate the embed code for a player using the Players module when you want to dynamically assign a video to the player at runtime. For information on assigning videos to a player dynamically, see <a href="/publish/dynamically-assigning-videos-player.html">Dynamically Assigning Videos to a Player</a>.</p>
-    <p>If you are a {{ site.product_short }} customer looking to publish a playlist or a single video to a player, use the publish function inside the Media module. For more information, see <a href="/publish/publishing-videos-and-playlists-media-module.html">Publishing Videos and Playlists with the Media Module</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="diff">Preview player vs. published player</h2>
-    <p>The preview player is used so you can preview changes before they are published. Once the changes are acceptable, the player can be published and the changes will be reflected in any published players. The preview player will display a Brightcove logo overlay indicating that it should not be used in production.</p>
-    <p>The published player has been optimized and is the player that will appear on your web pages. This player contains all of the changes that have been made to the player settings and then published by clicking the <strong>Publish</strong> button.</p>
-    <p>Open the Players module and select a player. Click <strong>Embed Code &amp; URL</strong> and click <strong>Preview Player</strong> or <strong>Published Player</strong>.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node14063-menu-options.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="types">Types of embed code</h2>
-    <p>There are two types of embed code that can be generated:</p>
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <p>Le module Players permet de générer le code d'intégration du lecteur et l'URL du lecteur pour les lecteurs en prévisualisation et publiés. En général, vous devez générer le code intégré d'un lecteur à l'aide du module Players lorsque vous souhaitez attribuer dynamiquement une vidéo au lecteur lors de l'exécution. Pour plus d'informations sur l'attribution dynamique de vidéos à un lecteur, consultez Attribution<a href="/publish/dynamically-assigning-videos-player.html"> dynamique de vidéos à un lecteur</a>.</p>
+    <p>Si vous êtes un client {{site.product_short}} et que vous souhaitez publier une playlist ou une seule vidéo sur un lecteur, utilisez la fonction de publication du module Médias. Pour plus d'informations, consultez<a href="/publish/publishing-videos-and-playlists-media-module.html"> Publier des vidéos et des listes de lecteur avec le module Médias</a>.</p>  </section><section class="bcls-section">
+    <h2 id="diff">Joueur d'aperçu vs lecteur
+ publié</h2>
+    <p>Le lecteur de prévisualisation est utilisé pour vous permettre de prévisualiser les modifications avant qu'elles ne soient publiées. Une fois les modifications acceptées, le lecteur peut être publié et les modifications seront répercutées sur tous les lecteurs publiés. Le lecteur de prévisualisation affichera un logo Brightcove superposé indiquant qu'il ne doit pas être utilisé en production.</p>
+    <p>Le lecteur publié a été optimisé et il s'agit du lecteur qui apparaîtra sur vos pages Web. Ce lecteur contient toutes les modifications apportées aux paramètres du lecteur puis publiées en cliquant sur le<strong> bouton</strong> Publier.</p>
+    <p>Ouvrez le module Players et sélectionnez un lecteur
+. Cliquez<strong> sur Code intégré et URL,</strong> puis sur<strong> Aperçu du lecteur</strong> ou Lecteur<strong> publié</strong>.</p>   <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node14063-menu-options.png" /></figure></section><section class="bcls-section">
+    <h2 id="types">Types de code intégré</h2>
+    <p>Il existe deux types de code intégré qui peuvent être générés:</p>
     <ul>
-      <li><strong>Standard (iframe)</strong> - Recommended for most cases. Places the player inside an <code translate="No">&lt;iframe&gt;</code> tag. If player dimensions are specified, the iframe will be sized to the player dimensions. If no player dimensions are specified, the iframe can be placed inside of a <code translate="No">&lt;div&gt;</code> tag and the responsive nature of the player will resize the player to occupy the entire space of the <code translate="No">&lt;div&gt;</code>.</li>
-      <li><strong>Advanced (I<strong>n-Page</strong>)</strong> - Allows the player to exist in the the HTML page directly, not in an iframe. This offers developers the benefits of ease of accessing the player and associated properties and events. By using the advanced embed code, you lose the ease of use of the player as a single, contained unit in social media applications and sharing. <strong>This option is available only for the published player.</strong></li>
-    </ul>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node14063-pub-code.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="previewcode">Generating embed code for a preview player</h2>
-    <p>To generate the embed code for a preview player:</p>
+      <li><strong>Standard (iframe)</strong> - Recommandé dans la plupart des cas. Place le lecteur à l'intérieur d'une<code translate="No"> balise </code>&lt;iframe&gt;. Si les dimensions du lecteur sont spécifiées, l'iframe sera dimensionnée en fonction des dimensions du lecteur. Si aucune dimension de lecteur n'est spécifiée, l'iframe peut être placé à l'intérieur d'une<code translate="No"> balise </code>&lt;div&gt; et la nature réactive du lecteur redimensionnera le lecteur pour occuper tout l'espace du <code translate="No">&lt;div&gt;</code>.</li>
+      <li><strong>Avancé (I<strong> N-page</strong>)</strong> - Permet au lecteur d'exister directement dans la page HTML, et non dans un iframe. Cela offre aux développeurs l'avantage d'accéder facilement au lecteur et aux propriétés et événements associés. En utilisant le code intégré avancé, vous perdez la facilité d'utilisation du lecteur en tant qu'unité unique et contenue dans les applications de médias sociaux et le partage. <strong>Cette option n'est disponible que pour le lecteur publié.</strong></li>
+    </ul>   <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node14063-pub-code.png" /></figure></section><section class="bcls-section">
+    <h2 id="previewcode">Génération du code intégré pour un lecteur de prévisualisation</h2>
+    <p>Pour générer le code intégré d'un lecteur d'aperçu:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Open the  <strong>Players</strong>  module.</li>
-      <li>Click on the row for the player you want to generate the code for. Don't click on the player name and open the properties page.</li>
-      <li>Click <strong>Embed Code &amp; URL</strong> and click <strong>Preview Player</strong>.</li>
-      <li>Select the appropriate embed code.</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="publish">Generating embed code for a published player</h2>
-    <p>To generate the embed code for a published player:</p>
+      <li>Ouvrez le<strong> module</strong> Players.</li>
+      <li>Cliquez sur la ligne du lecteur pour lequel vous souhaitez générer le code. Ne cliquez pas sur le nom du lecteur
+ et n'ouvrez pas la page des propriétés.</li>
+      <li>Cliquez sur<strong> Code intégré et URL,</strong> puis sur<strong> Aperçu du lecteur</strong>.</li>
+      <li>Sélectionnez le code intégré approprié.</li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="publish">Génération du code intégré pour un lecteur publié</h2>
+    <p>Pour générer le code intégré d'un lecteur publié:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Open the  <strong>Players</strong>  module.</li>
-      <li>Click on the row for the player you want to generate the code for.</li>
-      <li>Click <strong>Embed Code &amp; URL</strong> and click <strong>Published Player</strong>.</li>
-      <li>Select the appropriate embed code.</li>
+      <li>Ouvrez le<strong> module</strong> Players.</li>
+      <li>Cliquez sur la ligne du lecteur pour lequel vous souhaitez générer le code.</li>
+      <li>Cliquez<strong> sur Code intégré et URL,</strong> puis sur Lecteur<strong> publié</strong>.</li>
+      <li>Sélectionnez le code intégré approprié.</li>
     </ol>
-    <p>The Published Player embed code can also be copied by clicking on a player name and then clicking <span class="button-blue">Publish &amp; Embed</span>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="appid">Adding an application ID to the embed code</h2>
-    <p>In the past, publishers would commonly create new players with different names to use on different parts of a site or to use on different sites. When reviewing player analytics, having different player names made it easier to determine which players were getting the most views. By adding an application ID parameter to the embed code, the same player can be used across a site, or sites, and the application ID can be used to identify where the player was published. Using a player application ID can help reduce the number of players that need to be created and maintained. For information on adding an application ID to the embed code, see <a href="/publish/adding-application-id-player-embed-code.html">Adding an Application ID to the Player Embed Code</a>.</p>
-  </section>
-</article>
+    <p>Le code d'intégration du lecteur publié peut également être copié en cliquant sur le nom d'un lecteur
+, puis en cliquant sur<span class="button-blue"> Publier et intégrer</span>.</p>  </section><section class="bcls-section">
+    <h2 id="appid">Ajout d'un ID d'application au code intégré</h2>
+    <p>Dans le passé, les éditeurs créaient généralement de nouveaux lecteurs avec des noms différents à utiliser sur différentes parties d'un site ou à utiliser sur différents sites. Lors de l'examen des analyses des lecteur
+s, le fait d'avoir des noms de lecteur
+s différents a permis de déterminer plus facilement quels lecteur
+s obtenaient le plus de vues. En ajoutant un paramètre d'ID d'application au code intégré, le même lecteur peut être utilisé sur un ou plusieurs sites, et l'ID d'application peut être utilisé pour identifier l'endroit où le lecteur a été publié. L'utilisation d'un ID d'application de lecteur peut contribuer à réduire le nombre de lecteurs à créer et à gérer. Pour plus d'informations sur l'ajout d'un ID d'application au code intégré, consultez<a href="/publish/adding-application-id-player-embed-code.html"> Ajout d'un ID d'application au code intégré du lecteur</a>.</p>   </section></article>
